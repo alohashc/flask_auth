@@ -7,7 +7,7 @@ class UserCred(db.Model):
     user_id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(20), unique=True)
     pw_hash = db.Column(db.String(180), unique=True)
-    info = db.relationship('UserInfo', uselist=False, back_populates="cred")
+    info = db.relationship('UserInfo', uselist=False, back_populates="cred") # NOT USE
 
     def __init__(self, login, password):
         self.login = login
@@ -26,8 +26,8 @@ class UserInfo(db.Model):
     name = db.Column(db.String(20))
     surname = db.Column(db.String(20))
     age = db.Column(db.Integer)
-    user_id = db.Column(db.Integer, db.ForeignKey('cred.user_id'))
-    cred = db.relationship('UserCred', uselist=False, back_populates="info")
+    user_id = db.Column(db.Integer, db.ForeignKey('cred.user_id')) # NOT USE
+    cred = db.relationship('UserCred', uselist=False, back_populates="info") # NOT USE
 
     def __init__(self, id, name=None, surname=None, age=None):
         self.name = name

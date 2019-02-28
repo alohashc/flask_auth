@@ -3,6 +3,7 @@ import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+# NOT USE
 POSTGREDB = {
     'HOST' : 'localhost',
     'PORT' : 5432,

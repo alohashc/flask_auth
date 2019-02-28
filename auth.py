@@ -122,3 +122,5 @@ def user_info():
         else:
             return 'Access is forbidden', 403
 
+if __name__ == "__main__":
+    app.run()
