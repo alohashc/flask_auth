@@ -15,3 +15,5 @@ Simple authentication with Flask Framework and ORM SQlAlchemy.
    
 3. install all required packages:
     `pip install -r requirements.txt`
+    
+4. run `auth.py`
